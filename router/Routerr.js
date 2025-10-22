@@ -1,5 +1,5 @@
 import express from "express"
-import { register,login } from "../controller/controller.js";
+import { register,login,deleteUser } from "../controller/controller.js";
 
 const router=express.Router()
 
@@ -13,5 +13,6 @@ router.post('/register', register);
 // @desc    Login user and return JWT
 // @access  Public
 router.post('/login', login);
+router.delete("/delete/:id", deleteUser);
 
 export default router
