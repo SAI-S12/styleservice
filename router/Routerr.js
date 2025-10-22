@@ -1,5 +1,5 @@
 import express from "express"
-import { register,login,deleteUser } from "../controller/controller.js";
+import { register,login,deleteUser,updateUser } from "../controller/controller.js";
 
 const router=express.Router()
 
@@ -14,5 +14,7 @@ router.post('/register', register);
 // @access  Public
 router.post('/login', login);
 router.delete("/delete/:id", deleteUser);
+router.delete("/delete/:id", deleteUser);
+
 
 export default router
